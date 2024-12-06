@@ -87,25 +87,12 @@ const MultiStepForm = () => {
         {step === 4 && <Step4 formData={formData} handleChange={handleChange} errors={errors} />}
         {step === 5 && <Step5 formData={formData} handleSubmit={handleSubmit} errors={errors} />}
        
-        <div className="d-flex justify-content-between mt-3">
-          {step > 1 && (
-            <button className="btn btn-secondary" onClick={handleBack}>
-              Back
-            </button>
-          )}
-          {step < 5 ? (
-            <button className="btn btn-primary" onClick={handleNext}>
-              Next
-            </button>
-          ) : (
-            <button className="btn btn-success" onClick={handleSubmit}>
-              Submit
-            </button>
-          )}
+     
+          
         </div>
       </div>
-    </div>
+    
   );
-};
+
 
 export default MultiStepForm;
